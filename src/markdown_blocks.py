@@ -27,7 +27,8 @@ def markdown_to_html_node(markdown):
     for block in blocks:
         html_node = block_to_html_node(block)
         children.append(html_node)
-    return ParentNode("div", children, None)
+    return ParentNode(tag='div', children=children, props=None)
+    # return ParentNode("div", children, None)
 
 
 def block_to_html_node(block):
